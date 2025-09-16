@@ -22,7 +22,7 @@ jobs:
           aws-region: ${{secrets.REGION}}
 
       - name: Clear stale site in S3
-        run: aws s3 rm  s3://${{ secrets.BUCKET_NAME }}/books-crud-frontend
+        run: aws s3 rm  s3://${{ secrets.BUCKET_NAME }}/
 
       - name: Deploy to S3
-        run: aws s3 cp books-crud-frontend s3://${{ secrets.BUCKET_NAME }}/books-crud-frontend --recursive
+        run: aws s3 sync ./books-crud-frontend s3://${{ secrets.BUCKET_NAME }} --delete

@@ -1,0 +1,32 @@
+name: Deploy Unyte Bridge Backend to Contabo
+
+on:
+  push:
+    branches:
+        - main
+
+# env:
+#   IMAGE_NAME: unyte-reconciliation-backend 
+#   CONTAINER_NAME: bridge_backend_dev
+#   IMAGE_TAG: latest
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{  secrets.ACCOUNT_ID }}:role/${{ secrets.ROLE_NAME }}
+          aws-region: ${{secrets.REGION}}
+
+      - name: Clear stale site in S3
+        run: aws s3 rm  s3://${{ secrets.BUCKET_NAME }}/books-crud-frontend
+
+      - name: Deploy to S3
+        run: aws s3 cp books-crud-frontend s3://${{ secrets.BUCKET_NAME }}/books-crud-frontend --recursive

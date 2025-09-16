@@ -1,3 +1,6 @@
 books-crud-backend/node_modules
 books-crud-backend/.env
 books-crud-frontend/.env
+terraform.*
+.terraform*
+*.pem

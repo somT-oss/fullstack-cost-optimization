@@ -1,0 +1,167 @@
+/* ============ Global Styles ============ */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f6fa;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  color: #333;
+}
+
+/* ============ Container ============ */
+form {
+  background: #fff;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============ Labels & Inputs ============ */
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  color: #444;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+/* ============ Buttons ============ */
+button {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #357abd;
+}
+
+.cancel-link {
+  display: inline-block;
+  margin-top: 15px;
+  text-align: center;
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cancel-link:hover {
+  text-decoration: underline;
+}
+
+/* ============ Message Styles ============ */
+#message {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* ============ Table (for view page) ============ */
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #4a90e2;
+  color: white;
+}
+
+tr:hover {
+  background: #f1f1f1;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 600px) {
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}
+
+/* Primary button style (shared across pages) */
+.btn-primary {
+  background: #4a90e2;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #357abd;
+}
+
+/* Small action buttons inside table */
+.btn-small {
+  padding: 6px 10px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.edit-btn {
+  background: #4a90e2;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #357abd;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Add a New Book</h1>
+
+  <div id="message"></div>
+
+  <form id="addForm">
+    <label>
+      Title:
+      <input type="text" id="title" required>
+    </label>
+
+    <label>
+      Author:
+      <input type="text" id="author" required>
+    </label>
+
+    <label>
+      Published Date:
+      <input type="date" id="publishedDate" required>
+    </label>
+
+    <button type="submit">Add Book</button>
+    <a href="index.html" class="cancel-link">Cancel</a>
+  </form>
+
+  <script src="add.js"></script>
+</body>
+</html>

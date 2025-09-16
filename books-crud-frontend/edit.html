@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Edit Book</h1>
+
+  <div id="error" class="error"></div>
+
+  <form id="editForm">
+    <label>
+      Title:
+      <input type="text" id="title" name="title" required />
+    </label>
+
+    <label>
+      Author:
+      <input type="text" id="author" name="author" required />
+    </label>
+
+    <label>
+      Published Date:
+      <input type="date" id="publishedDate" name="publishedDate" required />
+    </label>
+
+    <button type="submit">Update Book</button>
+    <a href="index.html" class="cancel-link">Cancel</a>
+  </form>
+
+  <script src="edit.js"></script>
+</body>
+</html>

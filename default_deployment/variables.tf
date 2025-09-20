@@ -1,5 +1,5 @@
 variable "vpc_cidr_block_ip" {
-    type = string   
+  type = string
 }
 
 variable "books_public_subnet" {
@@ -11,23 +11,23 @@ variable "books_private_subnet" {
 }
 
 variable "instance_ami" {
-    type = string
+  type = string
 }
 
 variable "instance_type" {
-    type = string
+  type = string
 }
 
 variable "books_ec2_sg_name" {
-    type = string
+  type = string
 }
 
 variable "books_rds_sg_name" {
-    type = string
+  type = string
 }
 
 variable "books_elb_sg_name" {
-    type = string
+  type = string
 }
 
 variable "region" {

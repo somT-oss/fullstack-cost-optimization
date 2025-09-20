@@ -10,11 +10,16 @@ const DB_NAME = process.env.DB_NAME || '';
 const DB_HOST = process.env.DB_HOST || 'localhost';
 const DB_PORT = Number(process.env.DB_PORT) || 5432;
 
+const dialectOptions = env === 'production'
+  ? { ssl: { require: true, rejectUnauthorized: false } } // dev-friendly; use CA in prod
+  : {};
+
 export const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   host: DB_HOST,
   port: DB_PORT,
   dialect: 'postgres',
   logging: false,
+  dialectOptions,
 });
 
 export const Book = sequelize.define('Book', {

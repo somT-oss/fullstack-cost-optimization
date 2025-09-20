@@ -1,9 +1,9 @@
 variable "instance_ami" {
-    type = string
+  type = string
 }
 
 variable "instance_type" {
-    type = string
+  type = string
 }
 
 variable "private_subnet_id" {

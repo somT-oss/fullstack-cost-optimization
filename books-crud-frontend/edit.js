@@ -1,5 +1,5 @@
 // edit.js
-const API_URL = 'http://localhost:3000/books';
+const API_URL = 'http://books-alb-355176752.us-east-1.elb.amazonaws.com/books';
 
 function getBookIdFromUrl() {
   const params = new URLSearchParams(window.location.search);

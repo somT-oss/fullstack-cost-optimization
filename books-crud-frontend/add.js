@@ -1,5 +1,5 @@
 // === Configuration ===
-const API_URL = 'http://localhost:3000/books'; // <-- Change if your backend uses another route
+const API_URL = 'http://books-alb-355176752.us-east-1.elb.amazonaws.com/books'; // <-- Change if your backend uses another route
 
 // === Select DOM elements ===
 const form = document.getElementById('addForm');

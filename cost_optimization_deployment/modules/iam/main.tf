@@ -38,8 +38,8 @@ resource "aws_iam_policy" "s3_read_policy" {
         ],
         Effect   = "Allow",
         Resource = [
-          "arn:aws:s3:::ssm-scripts-590183701688",
-          "arn:aws:s3:::ssm-scripts-590183701688/*"
+          "",
+          ""
         ]
       },
     ]
